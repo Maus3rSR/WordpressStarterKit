@@ -1,0 +1,33 @@
+{
+    "name": "kevinunfricht/wordpress_starterkit",
+    "description": "Wordpress project StarterKit",
+    "extra": {
+        "installer-paths": {
+            "public/wp-content/plugins/{$name}": [
+                "type:wordpress-plugin"
+            ],
+            "public/wp-content/themes/{$name}": [
+                "type:wordpress-theme"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
+    "require": {},
+    "scripts": {
+        "install-deps": "composer require  wpackagist-plugin/secupress wpackagist-plugin/wordpress-seo wpackagist-plugin/elementor wpackagist-plugin/duplicate-post wpackagist-plugin/broken-link-checker wpackagist-plugin/polylang wpackagist-plugin/woocommerce wpackagist-plugin/advanced-custom-fields wpackagist-plugin/wp-super-cache wpackagist-plugin/loco-translate wpackagist-plugin/autoptimize wpackagist-plugin/contact-form-7 wpackagist-plugin/cookie-law-info",
+        "install-deps-php": "php ./composer.phar require  wpackagist-plugin/secupress wpackagist-plugin/wordpress-seo wpackagist-plugin/elementor wpackagist-plugin/duplicate-post wpackagist-plugin/broken-link-checker wpackagist-plugin/polylang wpackagist-plugin/woocommerce wpackagist-plugin/advanced-custom-fields wpackagist-plugin/wp-super-cache wpackagist-plugin/loco-translate wpackagist-plugin/autoptimize wpackagist-plugin/contact-form-7 wpackagist-plugin/cookie-law-info",
+        "docker": "docker compose -f ./docker/base.yml -f ./docker/local.yml up -d",
+        "docker-nodaemon": "docker compose -f ./docker/base.yml -f ./docker/local.yml up",
+        "docker-down": "docker compose -f ./docker/base.yml -f ./docker/local.yml down",
+        "docker-down-volumes": "docker compose -f ./docker/base.yml -f ./docker/local.yml down -v"
+    }
+}

@@ -1,0 +1,15 @@
+version: "3"
+services:
+  mariadb:
+    image: "mariadb:latest"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+  app:
+    image: "wordpress:latest"
+    environment:
+      WORDPRESS_DB_HOST: mariadb
+    depends_on:
+      - mariadb
+    volumes:
+      - ../public:/var/www/html
+      - ./dev-uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
