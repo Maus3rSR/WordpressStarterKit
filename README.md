@@ -13,8 +13,8 @@ Launch Wordpress project in minute with a basic structure. It use [WpPackagist](
 
 ## Configuration
 
-- Copy `.env.sample` to `.env` and configure its variables
-- Copy `local.yml.sample` to `local.yml` and configure this docker-compose file to fit your needs. _NB: This file is an override of `base.yml`_
+- Copy `docker/.env.sample` to `docker/.env` and configure its variables
+- Copy `docker/local.yml.sample` to `docker/local.yml` and configure this docker-compose file to fit your needs. _NB: This file is an override of `base.yml`_
 
 ## Launch
 
