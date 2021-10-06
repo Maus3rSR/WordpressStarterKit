@@ -12,6 +12,7 @@ public/wp-content/languages/*
 # ignore all files starting with .
 .*
 !.env.sample
+!public/.gitkeep
 
 # track this file .gitignore (i.e. do NOT ignore it)
 !/.gitignore
