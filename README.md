@@ -14,18 +14,17 @@ Launch Wordpress project in minute with a basic structure. It use [WpPackagist](
 ## Configuration
 
 - Copy `docker/.env.sample` to `docker/.env` and configure its variables
-- Copy `docker/local.yml.sample` to `docker/local.yml` and configure this docker-compose file to fit your needs. _NB: This file is an override of `base.yml`_
 
 ## Launch
 
 > **Note:** If you have `composer` installed, you will launch scripts by using `composer` cli command. If you don't, you'll need `php` installed to launch with the `composer.phar` file with `php composer.phar` command
 
-- Install plugins dependencies by using `composer install-deps` or `php composer.phar install-deps-php` comand
+- Install plugins dependencies by using `composer require-deps` or `php composer.phar require-deps` comand
 - Launch containers by using `composer docker` or `php composer.phar docker` command
 
 **And voilà!**
 
-> **Note:** `install-deps` will add a few usefull plugins that will fit basic needs. Its personal choices, you can of course install what you'll need/want
+> **Note:** `require-deps` will add a few usefull plugins that will fit basic needs. Its personal choices, you can of course install what you'll need/want
 
 > **Note:** There are some few docker commands available inside compose scripts:
 > - `docker` up services in daemon mode _(in background)_

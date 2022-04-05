@@ -11,23 +11,21 @@
             ]
         }
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://wpackagist.org",
-            "only": [
-                "wpackagist-plugin/*",
-                "wpackagist-theme/*"
-            ]
-        }
-    ],
+    "repositories": [{
+        "type": "composer",
+        "url": "https://wpackagist.org",
+        "only": [
+            "wpackagist-plugin/*",
+            "wpackagist-theme/*"
+        ]
+    }],
     "require": {},
     "scripts": {
-        "install-deps": "composer require  wpackagist-plugin/secupress wpackagist-plugin/wordpress-seo wpackagist-plugin/elementor wpackagist-plugin/duplicate-post wpackagist-plugin/broken-link-checker wpackagist-plugin/polylang wpackagist-plugin/woocommerce wpackagist-plugin/advanced-custom-fields wpackagist-plugin/wp-super-cache wpackagist-plugin/loco-translate wpackagist-plugin/autoptimize wpackagist-plugin/contact-form-7 wpackagist-plugin/cookie-law-info",
-        "install-deps-php": "php ./composer.phar require  wpackagist-plugin/secupress wpackagist-plugin/wordpress-seo wpackagist-plugin/elementor wpackagist-plugin/duplicate-post wpackagist-plugin/broken-link-checker wpackagist-plugin/polylang wpackagist-plugin/woocommerce wpackagist-plugin/advanced-custom-fields wpackagist-plugin/wp-super-cache wpackagist-plugin/loco-translate wpackagist-plugin/autoptimize wpackagist-plugin/contact-form-7 wpackagist-plugin/cookie-law-info",
-        "docker": "docker compose -f ./docker/base.yml -f ./docker/local.yml up -d",
-        "docker-nodaemon": "docker compose -f ./docker/base.yml -f ./docker/local.yml up",
-        "docker-down": "docker compose -f ./docker/base.yml -f ./docker/local.yml down",
-        "docker-down-volumes": "docker compose -f ./docker/base.yml -f ./docker/local.yml down -v"
+        "require-deps": "@composer require wpackagist-plugin/secupress wpackagist-plugin/wordpress-seo wpackagist-plugin/elementor wpackagist-plugin/duplicate-post wpackagist-plugin/broken-link-checker wpackagist-plugin/polylang wpackagist-plugin/woocommerce wpackagist-plugin/advanced-custom-fields wpackagist-plugin/wp-super-cache wpackagist-plugin/loco-translate wpackagist-plugin/autoptimize wpackagist-plugin/contact-form-7 wpackagist-plugin/cookie-law-info wpackagist-plugin/tiny-compress-images",
+        "install-deps": "@composer install",
+        "docker": "cd ./docker && docker compose up -d",
+        "docker-nodaemon": "cd ./docker && docker compose up",
+        "docker-down": "cd ./docker && docker compose down",
+        "docker-down-volumes": "cd ./docker && docker compose down -v"
     }
 }
